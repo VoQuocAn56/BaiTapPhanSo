@@ -35,7 +35,7 @@ namespace BTnhom
             }
             else {
                 //vd 2 phần số 1/2, 1/3 khác mẫu -> tìm bội số chung giữa 2 và 3
-                int boiSoChung = BoiSoChung1(phanSo1.MauSo, phanSo2.MauSo);
+                int boiSoChung = BoiSoChung(phanSo1.MauSo, phanSo2.MauSo);
 
                 //bội số chung giũa 1/2 và 1/3 là 6 
                 //tử số phân số 1 nhân 3 (6/2 = 3)
@@ -61,7 +61,7 @@ namespace BTnhom
                 return KetQuaPhepTinh(HieuTuSo, MauSo);
             }
             else {
-                int boiSoChung = BoiSoChung1(phanSo1.MauSo, phanSo2.MauSo);
+                int boiSoChung = BoiSoChung(phanSo1.MauSo, phanSo2.MauSo);
 
                 int boiso1 = boiSoChung / phanSo1.MauSo;
                 int boiso2 = boiSoChung / phanSo2.MauSo;
@@ -128,69 +128,17 @@ namespace BTnhom
             return KetQuaPhanSo1 + "\n" + KetQuaPhanSo2;
         }
 
-        public int BoiSoChung1(int x, int y) {
+        public int BoiSoChung(int So1, int So2) {
+
+            for(int i = Math.Max(So1, So2); i <= (So1 * So2); i++) {
+                if ( i % So1 == 0 && i % So2 == 0) {
+                    int bcnn = i;
+                    return bcnn;
+                }
+            }
             return 0;
         }
-        public void BoiSoChung(int MauSo1, int MauSo2) {
-            Stack<int> stack = new Stack<int>();
 
-            /*
-            int hcf = 1;
-
-            int j = 0;
-            if (MauSo1 < MauSo2)
-            {
-                j = MauSo1;
-            }
-            else j = MauSo2;
-
-            for (int i = 1; i <= j; i++)
-            {
-                if (MauSo1 % i == 0 && MauSo2 % i == 0)
-                {
-                    hcf = i;
-                }
-            }
-
-            int bscnn = (MauSo1 * MauSo2) / hcf;
-            */
-
-            //phân tích thừa số nguyên tố.
-          
-            int so1 = MauSo1;
-            int so2 = MauSo2;
-        
-            int i = 2;
-            bool SoNguyenTo = KiemTraSoNguyenTo(i);
-
-            while (so1 != 1) {     
-                if (so1 % i == 0 && SoNguyenTo)
-                {
-                    stack.Push(i);
-                    so1 = so1 / i;
-                }
-                else i = i + 1;
-            }
-
-            foreach (int e in stack) {
-                Console.WriteLine(e.ToString());
-            }
-            //return bscnn;
-
-        }
-
-        private bool KiemTraSoNguyenTo(int n) {
-            //số 1 và 0 không phải số nguyên tố.
-            if (n < 2) return false;
-            else {
-                for (int i = 2; i < n - 1; i++) {
-                    if (n % i == 0) {
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }
         public int UocSoChung(int So1, int So2) {
             while (So1 != So2) {
                 if (So1 > So2)

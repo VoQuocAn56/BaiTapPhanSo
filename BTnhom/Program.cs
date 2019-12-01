@@ -10,11 +10,13 @@ namespace BTnhom
     {
         static void Main(string[] args)
         {
-            PhanSo phanSo1 = new PhanSo(1, 2);
-            PhanSo phanSo2 = new PhanSo(1, 3);
+            PhanSo phanSo1 = new PhanSo(3, 2);
+            PhanSo phanSo2 = new PhanSo(4, 3);
           
-            Console.WriteLine(phanSo1.LuyThua(phanSo1, phanSo2,2));
-            Console.WriteLine((int)Math.Sqrt(3));
+            //Console.WriteLine(phanSo1.LuyThua(phanSo1, phanSo2,2));
+
+            Console.WriteLine(phanSo1.Cong(phanSo1, phanSo2));
+
             // Console.WriteLine(phanSo1.Cong(phanSo1, phanSo2));
             //Console.WriteLine(phanSo1.Tru(phanSo1, phanSo2));
 
