@@ -1,0 +1,7 @@
+D:\Project\Project code\Project C-sharp Console\BTnhom\BTnhom\obj\Debug\BTnhom.csprojAssemblyReference.cache
+D:\Project\Project code\Project C-sharp Console\BTnhom\BTnhom\obj\Debug\BTnhom.csproj.CoreCompileInputs.cache
+D:\Project\Project code\Project C-sharp Console\BTnhom\BTnhom\bin\Debug\BTnhom.exe.config
+D:\Project\Project code\Project C-sharp Console\BTnhom\BTnhom\bin\Debug\BTnhom.exe
+D:\Project\Project code\Project C-sharp Console\BTnhom\BTnhom\bin\Debug\BTnhom.pdb
+D:\Project\Project code\Project C-sharp Console\BTnhom\BTnhom\obj\Debug\BTnhom.exe
+D:\Project\Project code\Project C-sharp Console\BTnhom\BTnhom\obj\Debug\BTnhom.pdb
