@@ -128,10 +128,13 @@ namespace BTnhom
             return KetQuaPhanSo1 + "\n" + KetQuaPhanSo2;
         }
 
-        public int BoiSoChung(int So1, int So2) {
+        public int BoiSoChung(int a, int b) {
 
-            for(int i = Math.Max(So1, So2); i <= (So1 * So2); i++) {
-                if ( i % So1 == 0 && i % So2 == 0) {
+            //bội chung nhỏ nhất nằm trong khoảng max(a, b) <= bcnn <= a*b
+            //nên chỉ cần duyệt các giá trị trong khoảng [max(a,b), a*b]   
+            for (int i = Math.Max(a, b); i <= (a * b); i++) {
+                //giá trị đầu tiên chia hết cho cả a, b là bcnn của 2 số a và b
+                if (i % a == 0 && i % b == 0) {
                     int bcnn = i;
                     return bcnn;
                 }
